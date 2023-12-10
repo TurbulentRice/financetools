@@ -4,6 +4,8 @@
 
 class LoanQueueCompare:
   def __init__(self, q_list: list):
+
+    # Primary attributes
     self.grid = q_list
 
   def top(self):

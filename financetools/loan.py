@@ -266,21 +266,14 @@ class Loan:
     #   Handle infinite loop (payments can't cover interest)
     def can_payoff(self):
         return self.payment_amt > self.get_int_due()
-
-#########################################
-#   CHILD CLASS
-#########################################
-
-#   Inherits all from parent, added duplicative pay methods
-class StandardLoan(Loan):
-
+    
     ###############################################
     #   ITERATIVE DUPLICATIVE SOLVE METHODS
     ###############################################
 
-    # Return a new StandardLoan using self's state as init data
+    # Return a new Loan using self's state as init data
     def branch(self):
-        return StandardLoan(self.current_bal, self.int_rate, self.payment_amt, title=self.title, term=self.term)
+        return Loan(self.current_bal, self.int_rate, self.payment_amt, title=self.title, term=self.term)
 
     # Call payoff() on a branch of self
     # Return paid branch loan obj

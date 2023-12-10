@@ -7,6 +7,8 @@ from .loan_queue_compare import LoanQueueCompare
 
 class LoanQueue:
     def __init__(self, loans: [Loan], budget: float=None, title=None):
+        
+        # Primary attributes
         self.title = title
         self.Q = loans
         self.budget = budget
