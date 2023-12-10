@@ -1,5 +1,5 @@
-from loan import Loan
-from loan_queue_compare import LoanQueueCompare
+from .loan import Loan
+from .loan_queue_compare import LoanQueueCompare
 
 #########################################
 #   Queue of Loans
